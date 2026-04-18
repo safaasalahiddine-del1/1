@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A secure, professional, and colorful travel guide for international visitors to Morocco.">
+    <title>Safe Morocco Travel Guide 2025 | Secure & Authentic Adventures</title>
+    
+    <!-- Google Fonts for a modern, friendly feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            /* Eye-Safe Colorful Palette */
+            --majorelle: #2E5894;    /* Iconic Blue */
+            --terracotta: #E2725B;   /* Warm Clay */
+            --emerald: #2A9D8F;      /* Security/Nature Green */
+            --sand: #F4A261;         /* Desert Orange */
+            --cream: #FFFDF5;        /* Background (Softer than pure white) */
+            --dark-petrol: #264653;  /* Readable text color (Dark Teal) */
+            --ruby: #BC4749;         /* Alert Red */
+            --glass: rgba(255, 255, 255, 0.9);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--cream);
+            color: var(--dark-petrol);
+            line-height: 1.8;
+            scroll-behavior: smooth;
+        }
+
+        /* --- Header & Mosaic Overlay --- */
+        header {
+            background: linear-gradient(135deg, var(--majorelle) 0%, var(--terracotta) 100%);
+            padding: 7rem 1.5rem;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 10px solid var(--sand);
+        }
+
+        /* Subtle Geometric Moroccan Pattern Overlay */
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
+            opacity: 0.15;
+            pointer-events: none;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 6vw, 4rem);
+            margin-bottom: 1rem;
+            position: relative;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+        }
+
+        header p {
+            font-size: 1.25rem;
+            font-weight: 300;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            opacity: 0.95;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.04);
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--majorelle);
+            font-weight: 600;
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            background: rgba(46, 88, 148, 0.06);
+            transition: 0.3s ease;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        nav a:hover {
+            background: var(--majorelle);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* --- Main Content --- */
+        .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem; }
+
+        section {
+            background: white;
+            border-radius: 35px;
+            padding: 4rem;
+            margin-bottom: 4rem;
+            box-shadow: 0 20px 50px rgba(38, 70, 83, 0.04);
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--majorelle);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* --- Colorful Info Cards --- */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+
+        .card {
+            padding: 2.5rem;
+            border-radius: 30px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(0,0,0,0.03);
+            height: 100%;
+        }
+
+        .card:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(0,0,0,0.08); }
+
+        .card-blue { background: #F2F6FA; border-top: 8px solid var(--majorelle); }
+        .card-orange { background: #FFF7F2; border-top: 8px solid var(--terracotta); }
+        .card-green { background: #F4FAF9; border-top: 8px solid var(--emerald); }
+
+        .card i { font-size: 2.5rem; margin-bottom: 1.5rem; display: block; }
+        .card h3 { margin-bottom: 1rem; color: var(--dark-petrol); font-size: 1.4rem; }
+
+        /* --- Secure Table --- */
+        .table-wrap { overflow-x: auto; border-radius: 25px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); margin-top: 2rem; }
+        table { width: 100%; border-collapse: collapse; background: white; }
+        th { background: var(--majorelle); color: white; padding: 1.5rem; text-align: left; }
+        td { padding: 1.2rem 1.5rem; border-bottom: 1px solid #f2f2f2; }
+        tr:last-child td { border-bottom: none; }
+        tr:nth-child(even) { background: #F9FBFF; }
+
+        /* --- Emergency Banner --- */
+        .emergency-banner {
+            background: linear-gradient(135deg, var(--ruby), var(--terracotta));
+            color: white;
+            padding: 2.5rem;
+            border-radius: 25px;
+            margin: 3rem 0;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 25px;
+            box-shadow: 0 15px 30px rgba(188, 71, 73, 0.2);
+        }
+
+        .emergency-item { text-align: center; flex: 1; min-width: 150px; }
+        .emergency-item strong { font-size: 2rem; display: block; margin-top: 5px; }
+
+        /* --- Interactive Print Button --- */
+        .btn-print {
+            display: inline-block;
+            margin-top: 3rem;
+            padding: 1.2rem 2.8rem;
+            background: var(--emerald);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            box-shadow: 0 10px 25px rgba(42, 157, 143, 0.3);
+            transition: 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-print:hover { background: var(--majorelle); transform: scale(1.05); }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--dark-petrol);
+            color: rgba(255,255,255,0.7);
+            padding: 5rem 1rem;
+            text-align: center;
+            border-top: 12px solid var(--sand);
+        }
+
+        footer strong { color: white; font-size: 1.2rem; }
+
+        /* --- Mobile Responsiveness --- */
+        @media (max-width: 768px) {
+            section { padding: 2.5rem 1.5rem; }
+            header { padding: 5rem 1rem; }
+            header h1 { font-size: 2.5rem; }
+            nav { gap: 8px; padding: 0.8rem; }
+            nav a { font-size: 0.75rem; padding: 0.5rem 0.8rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+
+        /* Print Settings */
+        @media print {
+            nav, .btn-print, header::before { display: none; }
+            body { background: white; }
+            section { box-shadow: none; border: 1px solid #eee; margin-bottom: 20px; page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🕌 Safe Morocco 2025</h1>
+        <p>A secure, colorful, and authentic guide designed for international visitors to explore the Kingdom of Wonder with total confidence.</p>
+    </header>
+
+    <nav id="navbar">
+        <a href="#prep"><i class="fas fa-suitcase"></i> Prep</a>
+        <a href="#transport"><i class="fas fa-train-subway"></i> Move</a>
+        <a href="#safety"><i class="fas fa-shield-halved"></i> Safety</a>
+        <a href="#culture"><i class="fas fa-mosque"></i> Respect</a>
+    </nav>
+
+    <div class="container">
+        
+        <!-- Prep Section -->
+        <section id="prep">
+            <h2><i class="fas fa-map-location-dot" style="color:var(--terracotta)"></i> Pre-Arrival Essentials</h2>
+            <div class="grid">
+                <div class="card card-blue">
+                    <i class="fas fa-sim-card" style="color:var(--majorelle)"></i>
+                    <h3>Digital Safety</h3>
+                    <p>Don't rely on hotel Wi-Fi for navigation. Get a <strong>Maroc Telecom</strong> eSIM at the airport ($10 for 10GB). GPS is your #1 safety tool in the Medinas.</p>
+                </div>
+                <div class="card card-orange">
+                    <i class="fas fa-wallet" style="color:var(--sand)"></i>
+                    <h3>Currency Strategy</h3>
+                    <p>1 USD ≈ 10 MAD. While cities accept cards, you need cash for taxis and street vendors. Keep 20 MAD bills for small tips and bathroom access.</p>
+                </div>
+                <div class="card card-green">
+                    <i class="fas fa-bottle-water" style="color:var(--emerald)"></i>
+                    <h3>Drink Smart</h3>
+                    <p>Stick to bottled water brands like <strong>Sidi Ali</strong> or <strong>Ain Saiss</strong>. Brushing teeth with tap water is safe, but drinking it isn't recommended.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transport Section -->
+        <section id="transport">
+            <h2><i class="fas fa-route" style="color:var(--majorelle)"></i> Secure Transportation</h2>
+            <p>Traveling between Moroccan cities is beautiful and safe if you use official channels.</p>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>Best For</th>
+                            <th>Safety Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Al Boraq (Bullet Train)</strong></td>
+                            <td>Tangier ↔ Casablanca</td>
+                            <td>⭐⭐⭐⭐⭐ - World Class</td>
+                        </tr>
+                        <tr>
+                            <td><strong>InDrive / Heetch App</strong></td>
+                            <td>City Travel (Marrakech)</td>
+                            <td>⭐⭐⭐⭐ - Fixed Pricing</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CTM Intercity Bus</strong></td>
+                            <td>Rural & Coastal routes</td>
+                            <td>⭐⭐⭐⭐ - Baggage Tagged</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Safety Section -->
+        <section id="safety">
+            <h2><i class="fas fa-user-shield" style="color:var(--emerald)"></i> The Secure Traveler Protocol</h2>
+            <p style="margin-bottom: 2rem;">Morocco is statistically safer than many Western cities, but being aware of "nuisance scams" is smart.</p>
+            
+            <div class="grid">
+                <div class="card card-orange">
+                    <h3>The "Closed Path"</h3>
+                    <p>If someone says "That street is closed for prayer," they usually want to lead you to their shop. Simply smile and keep walking—the road is almost always open.</p>
+                </div>
+                <div class="card card-blue">
+                    <h3>The "False Guide"</h3>
+                    <p>In Medinas, young men may offer "free" directions. <strong>The Pro Tip:</strong> If lost, ask a <em>shopkeeper</em> inside their store or a <em>woman</em> for directions instead.</p>
+                </div>
+            </div>
+
+            <div class="emergency-banner">
+                <div class="emergency-item">Police (Urban) <strong>19</strong></div>
+                <div class="emergency-item">Gendarmerie (Rural) <strong>177</strong></div>
+                <div class="emergency-item">Ambulance <strong>15</strong></div>
+            </div>
+        </section>
+
+        <!-- Respect Section -->
+        <section id="culture" style="text-align: center;">
+            <h2><i class="fas fa-hand-holding-heart" style="color:var(--terracotta)"></i> Cultural Etiquette</h2>
+            <div class="grid" style="text-align: left; margin-top: 1rem;">
+                <div class="card card-green">
+                    <h3>Modest Dress</h3>
+                    <p>Cover shoulders and knees in public. This simple sign of respect reduces unwanted attention by 90% and opens more doors to local hospitality.</p>
+                </div>
+                <div class="card card-orange">
+                    <h3>"La Shukran"</h3>
+                    <p>This means "No, Thank You." It is your most powerful phrase. Use it with a firm but polite smile to decline persistent street vendors.</p>
+                </div>
+            </div>
+            
+            <button class="btn-print" onclick="window.print()">
+                <i class="fas fa-file-pdf"></i> Save Guide for Offline
+            </button>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <p><strong>Safe Morocco Travel Guide 2025</strong></p>
+            <p style="margin-top: 1rem; font-size: 0.85rem;">Designed for international visitors. Always verify current travel advisories with your national embassy before departure.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth Navigation Scroll
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                window.scrollTo({
+                    top: targetElement.offsetTop - 90,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Intersection Observer for Smooth Section Fade-ins
+        const observerOptions = { threshold: 0.15 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = "0";
+            section.style.transform = "translateY(40px)";
+            section.style.transition = "all 0.8s cubic-bezier(0.2, 1, 0.3, 1)";
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
